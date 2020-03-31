@@ -1,0 +1,33 @@
+Started
+[Wed Feb 12 02:09:49 UTC 2020] Starting branch indexing...
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git ls-remote --symref -- https://github.com/extremeFunk/echo.git # timeout=10
+Creating git repository in /var/jenkins_home/caches/git-2c844e99e8ae28155c47c2252056e809
+ > git init /var/jenkins_home/caches/git-2c844e99e8ae28155c47c2252056e809 # timeout=10
+Setting origin to https://github.com/extremeFunk/echo.git
+ > git config remote.origin.url https://github.com/extremeFunk/echo.git # timeout=10
+Fetching & pruning origin...
+Listing remote references...
+ > git config --get remote.origin.url # timeout=10
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h -- https://github.com/extremeFunk/echo.git # timeout=10
+Fetching upstream changes from origin
+ > git config --get remote.origin.url # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress --prune -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking branches...
+  Checking branch master
+      ‘Jenkinsfile’ found
+    Met criteria
+Scheduled build for branch: master
+  Checking branch staging
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+  Checking branch dev
+      ‘Jenkinsfile’ not found
+    Does not meet criteria
+Processed 3 branches
+[Wed Feb 12 02:09:57 UTC 2020] Finished branch indexing. Indexing took 7.2 sec
+Finished: SUCCESS

@@ -1,0 +1,3 @@
+pipeline-multibranch-defaults:latest
+git:latest
+workflow-aggregator

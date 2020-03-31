@@ -1,0 +1,31 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: echo-dev
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:dev-*
+spec:
+  releaseName: dev
+  chart:
+    git: git@github.com:extremeFunk/echo-pod-conf.git
+    path: charts/podinfo
+    ref: master
+  values:
+    image:
+      repository: us.gcr.io/echo-final-project/echo
+      tag: dev-01230b23220bf5d46ff5eee1eba9a52193742709
+    replicaCount: 2
+    hpa:
+      enabled: false
+    configMap:
+      persist: false
+    ingress:
+      hosts:
+        - host: echo-dev.mooo.com
+          paths: [/]
+      tls:
+      - hosts:
+        - echo-dev.mooo.com
