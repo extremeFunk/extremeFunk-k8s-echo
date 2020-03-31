@@ -1,5 +1,5 @@
 variable "project" {
-  default       = "$GCP_PROJECT"
+  type=string
 }
 
 variable "credentials_file_path" {

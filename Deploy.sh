@@ -1,5 +1,6 @@
 #!/bin/sh
 
+TF_VAR_project=$GPC_PROJECT
 terraform init
 terraform apply
 
