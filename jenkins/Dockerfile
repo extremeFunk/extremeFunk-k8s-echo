@@ -14,12 +14,14 @@ RUN apt-get install apt-transport-https ca-certificates gnupg -y
 RUN apt-get update
 RUN apt-get install google-cloud-sdk -y
 
-COPY --as-user:jenkins jenkins_home /var/jenkins_home
+COPY --chown=jenkins jenkins_home /var/jenkins_home
 
 COPY jenkins-plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 COPY gcp_crd.json /gcp_crd.json
-RUN gcloud auth activate-service-account rainrobot@echo-K8S.iam.gserviceaccount.com --key-file=/gcp_crd.json
+
+ARG GCP_PROJECT
+RUN gcloud auth activate-service-account rainrobot@$GCP_PROJECT.iam.gserviceaccount.com --key-file=/gcp_crd.json
 
 USER jenkins

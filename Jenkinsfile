@@ -1,5 +1,5 @@
 def TAG
-def REPO = us.gcr.io/echo-final-project/echo
+def REPO = us.gcr.io/echo-k8s-project/echo
 pipeline {
     agent any
     stages {
