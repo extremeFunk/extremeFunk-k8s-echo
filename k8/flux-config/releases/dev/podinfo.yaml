@@ -21,7 +21,7 @@ spec:
     hpa:
       enabled: false
     configMap:
-      persist: false
+      persist: 'false'
     ingress:
       hosts:
         - host: echo-dev.mooo.com

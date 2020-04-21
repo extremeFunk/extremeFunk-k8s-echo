@@ -20,3 +20,5 @@ spec:
     replicaCount: 2
     hpa:
       enabled: false
+    db:
+      secretName: prod

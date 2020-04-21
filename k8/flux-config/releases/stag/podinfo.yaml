@@ -30,3 +30,5 @@ spec:
         - hosts:
             - echo-stage.mooo.com
           secretName: stage-tls
+      db:
+        secretName: stage
