@@ -10,12 +10,12 @@ metadata:
 spec:
   releaseName: stage
   chart:
-    git: git@github.com:extremeFunk/echo-pod-conf.git
-    path: charts/podinfo
-    ref: master
+    git: git@github.com:extremeFunk/k8s-echo.git
+    path: charts/echo
+    ref: dev
   values:
     image:
-      repository: us.gcr.io/rainrobot-k8-project/echo
+      repository: us.gcr.io/echo-k8s-project/echo
       tag: latest
     replicaCount: 2
     hpa:
