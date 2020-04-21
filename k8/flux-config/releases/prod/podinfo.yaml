@@ -15,7 +15,7 @@ spec:
     ref: dev
   values:
     image:
-      repository: us.gcr.io/rainrobot-k8s-project/echo
+      repository: us.gcr.io/echo-k8s-project/echo
       tag: latest
     replicaCount: 2
     hpa:
