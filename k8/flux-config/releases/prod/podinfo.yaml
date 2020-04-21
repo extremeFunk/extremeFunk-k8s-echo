@@ -15,8 +15,8 @@ spec:
     ref: master
   values:
     image:
-      repository: us.gcr.io/echo-final-project/echo
-      tag: v1.2
+      repository: us.gcr.io/rainrobot-k8-project/echo
+      tag: latest
     replicaCount: 2
     hpa:
       enabled: false

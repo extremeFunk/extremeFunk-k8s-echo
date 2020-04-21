@@ -15,8 +15,8 @@ spec:
     ref: master
   values:
     image:
-      repository: us.gcr.io/echo-final-project/echo
-      tag: dev-01230b23220bf5d46ff5eee1eba9a52193742709
+      repository: us.gcr.io/rainrobot-k8-project/echo
+      tag: latest
     replicaCount: 2
     hpa:
       enabled: false
@@ -29,3 +29,4 @@ spec:
       tls:
       - hosts:
         - echo-dev.mooo.com
+        secretName: dev-tls
