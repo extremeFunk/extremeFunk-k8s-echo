@@ -101,7 +101,7 @@ git:
     # delete the private key: rm ./identity
     # add ./identity.pub as a read-only deployment key in your Git repo where the charts are
     # set the secret name (helm-ssh) below
-    secretName: "flux-key"
+    secretName: "flux-git-deploy"
     known_hosts: ""
     # You may want to configure access to multiple repositories via multiple deploy keys
     # flux-helm-operator is configured in /etc/ssh/ssh_config to use for all hosts the file /etc/fluxd/ssh/identity

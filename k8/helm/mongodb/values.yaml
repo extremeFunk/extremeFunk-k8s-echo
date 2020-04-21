@@ -76,7 +76,7 @@ usePassword: true
 ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#creating-a-user-and-database-on-first-run
 ##
 mongodbUsername: $ECHO_MONGO_USR
-mongodbPassword: @ECHO_MONGO_PASS
+mongodbPassword: $ECHO_MONGO_PASS
 mongodbDatabase: echo
 
 ## Whether enable/disable IPv6 on MongoDB

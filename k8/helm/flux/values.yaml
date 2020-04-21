@@ -130,7 +130,7 @@ git:
   # 3. Delete the private key: rm ./identity
   # 4. Add ./identity.pub as a deployment key with write access in your Git repo
   # 5. Set the secret name (flux-ssh) below
-  secretName: ""
+  #  secretName: ""
   # Enables `git-secret` support, as this makes use of known GPG keys
   # you will need to have imported the paired secret-key with one of
   # the public-keys which were used in the encryption using
@@ -225,7 +225,10 @@ ssh:
     # RFC4716” (RFC 4716/SSH2 public or private key),
     # “PKCS8” (PEM PKCS8 public key) or
     # “PEM” (PEM public key).
-    format: "RFC4716"
+
+    # RainRobot: Removed - "fluxd" probably don't support \
+    # it anymore
+    # format: "RFC4716"
 
 kube:
   # Override for kubectl default config

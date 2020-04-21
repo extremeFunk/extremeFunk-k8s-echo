@@ -1,9 +1,13 @@
 variable "project" {
-  type=string
+  type = "string"
+}
+
+variable "cluster_name" {
+    default = "echo-cluster"
 }
 
 variable "credentials_file_path" {
-  default       = "gcp_crd.json"
+  default = "gcp_crd.json"
 }
 
 variable "region" {
