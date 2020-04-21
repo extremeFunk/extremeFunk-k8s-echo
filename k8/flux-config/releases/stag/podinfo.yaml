@@ -11,7 +11,7 @@ spec:
   releaseName: stage
   chart:
     git: git@github.com:extremeFunk/k8s-echo.git
-    path: k8s-echo/k8/flux-config/charts/echo/
+    path: k8/flux-config/charts/echo/
     ref: dev
   values:
     image:
