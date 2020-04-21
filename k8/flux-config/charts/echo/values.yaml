@@ -6,7 +6,7 @@ replicaCount: 2
 
 configMap:
   port: 3000
-  loglevel: info
+  loglevel: debug
   persist: true
   dbname: echo
 
