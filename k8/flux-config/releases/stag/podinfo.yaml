@@ -11,7 +11,7 @@ spec:
   releaseName: stage
   chart:
     git: git@github.com:extremeFunk/k8s-echo.git
-    path: charts/echo
+    path: k8/charts/echo
     ref: dev
   values:
     image:
