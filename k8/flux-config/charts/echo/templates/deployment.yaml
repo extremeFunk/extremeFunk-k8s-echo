@@ -30,7 +30,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: {{ include "echo.fullname" . }}
-          {{ if (eq "true" "Value.configMap.persist") }}
+          {{ if Value.db.secretName }}
             - secretRef:
-                name: {{ include "echo.fullname" . }}
+                name: {{ Value.db.secretName }}
           {{- end }}
