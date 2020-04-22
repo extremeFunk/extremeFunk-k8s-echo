@@ -15,7 +15,6 @@ gcloud iam service-accounts keys create gcp_crd.json \
  --iam-account $GCP_ACCOUNT_ADDRESS
 gcloud auth configure-docker > /dev/null
 
-# build jenkins
 cp gcp_crd.json jenkins/gcp_crd.json
 cd jenkins
 docker  docker build --build-arg GCP_PROJECT=$GCP_PROJECT \

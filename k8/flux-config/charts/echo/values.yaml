@@ -19,6 +19,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+db:
+  secretName: ""
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
