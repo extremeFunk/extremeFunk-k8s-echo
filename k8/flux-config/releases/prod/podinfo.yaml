@@ -21,4 +21,4 @@ spec:
     hpa:
       enabled: false
     db:
-      secretName: prod
+      secretName: prod-echo
