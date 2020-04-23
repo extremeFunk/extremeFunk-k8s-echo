@@ -23,6 +23,8 @@ spec:
     configMap:
       persist: "true"
       dbname: echo-stage
+    db:
+      secretName: echo-db
     ingress:
       hosts:
         - host: echo-stage.mooo.com
@@ -31,5 +33,4 @@ spec:
         - hosts:
             - echo-stage.mooo.com
           secretName: stage-tls
-      db:
-        secretName: echo-db
+
