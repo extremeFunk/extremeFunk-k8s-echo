@@ -21,8 +21,8 @@ spec:
     hpa:
       enabled: false
     configMap:
+      persist: "true"
       dbname: echo-stage
-      persist: true
     ingress:
       hosts:
         - host: echo-stage.mooo.com

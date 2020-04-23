@@ -21,6 +21,6 @@ spec:
     hpa:
       enabled: false
     configMap:
-      persist: true
+      persist: "true"
     db:
       secretName: echo-db
