@@ -31,4 +31,4 @@ spec:
             - echo-stage.mooo.com
           secretName: stage-tls
       db:
-        secretName: stage-echo
+        secretName: db

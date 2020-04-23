@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Add secret environment variable
+# Rename file "secret-template.sh" to secret.sh
+# Modify content for your project
+. secret.sh
+
 echo "Please authenticate GCP account - press any key"
 read userin
 gcloud auth login
