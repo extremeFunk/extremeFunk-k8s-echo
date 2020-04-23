@@ -5,7 +5,7 @@ metadata:
 data:
   PORT: "{{ .Values.configMap.port }}"
   LOGLEVEL: "{{ .Values.configMap.loglevel }}"
-  {{ if .Values.db.secretName }}
-    PERSIST: "{{ .Values.configMap.persist }}"
-  {{- end }}
+{{ if .Values.db.secretName }}
+  PERSIST: "{{ .Values.configMap.persist }}"
+{{- end }}
   DBNAME: "{{ .Values.configMap.dbname }}"
