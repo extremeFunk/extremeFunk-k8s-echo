@@ -7,7 +7,7 @@ replicaCount: 2
 configMap:
   port: 3000
   loglevel: debug
-  persist: true
+  persist: false
   dbname: echo
 
 image:

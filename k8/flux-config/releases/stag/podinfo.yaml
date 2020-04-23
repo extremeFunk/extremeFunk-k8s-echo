@@ -22,6 +22,7 @@ spec:
       enabled: false
     configMap:
       dbname: echo-stage
+      persist: true
     ingress:
       hosts:
         - host: echo-stage.mooo.com

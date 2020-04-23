@@ -20,8 +20,6 @@ spec:
     replicaCount: 2
     hpa:
       enabled: false
-    configMap:
-      persist: false
     ingress:
       hosts:
         - host: echo-dev.mooo.com

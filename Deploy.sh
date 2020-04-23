@@ -20,9 +20,9 @@ PROD_DB=$(echo mongodb://$DB_USER:$DB_PASS@$DB_URL/echo | base64 -w 0)
 STAGE_DB=$(echo mongodb://$DB_USER:$DB_PASS@$DB_URL/echo-stage | base64 -w 0)
 
 kubectl create secret generic echo-db -n production \
---from-literal echo-prod=$PROD_DB
+--from-literal echo=$PROD_DB
 kubectl create secret generic echo-db -n staging \
---from-literal echo-stage=$STAGE_DB
+--from-literal echo=$STAGE_DB
 
 helm install cert-manager k8/helm/cert-manager -n cert-manager
 helm install nginx k8/helm/nginx -n nginx

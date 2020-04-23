@@ -20,5 +20,7 @@ spec:
     replicaCount: 2
     hpa:
       enabled: false
+    configMap:
+      persist: true
     db:
       secretName: echo-db
