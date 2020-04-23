@@ -21,4 +21,4 @@ spec:
     hpa:
       enabled: false
     db:
-      secretName: db
+      secretName: echo
