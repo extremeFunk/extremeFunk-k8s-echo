@@ -130,7 +130,7 @@ git:
   # 3. Delete the private key: rm ./identity
   # 4. Add ./identity.pub as a deployment key with write access in your Git repo
   # 5. Set the secret name (flux-ssh) below
-  #  secretName: ""
+  secretName: "git-key"
   # Enables `git-secret` support, as this makes use of known GPG keys
   # you will need to have imported the paired secret-key with one of
   # the public-keys which were used in the encryption using
@@ -140,7 +140,7 @@ git:
   # Global Git configuration See https://git-scm.com/docs/git-config for more details.
   config:
     enabled: false
-    secretName: ""
+    secretName: "flux-ssh"
     data: ""
     # data: |
     #   [credential "https://github.com"]
